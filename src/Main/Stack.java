@@ -43,7 +43,6 @@ public class Stack<T> implements IStack<T>{
 		return tam;
 	}
 
-	// Proximo valor
 	@Override
 	public T peek() {
 		if(tam == 0) {

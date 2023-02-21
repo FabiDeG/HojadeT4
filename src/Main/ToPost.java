@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 
-public class DriverP {
+public class ToPost {
 
 	public static void main(String[] args) throws FileNotFoundException{
 
@@ -15,16 +15,18 @@ public class DriverP {
 		inflix = scanner.nextLine();
 		String[] items = inflix.split(" ");
 		
-		Calcu calcu = new Calcu();
-		Stack<String> poS = new Stack<>();
+		Stack<String> inf = new Stack<>();
 		
 		float num1; 
 		float num2;
 		float res;
 		
 		for (String item : items) {
-			if ( isNumeric(item) == true) {
-				poS.push(item);
+			if (isNumeric(item) == true) {
+				inf.push(item);
+			}
+			else {
+				num1 = Float.parseFloat(inf.pop());
 			}
 		}
 		
