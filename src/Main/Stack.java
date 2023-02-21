@@ -29,14 +29,17 @@ public class Stack<T> implements IStack<T>{
 	}
 
 	@Override
-	public void push(Object item) {
-		
+	public void push(T item) {
+		now.add(item);
+		int ope = (tam + 1);
+		tam = ope;
+		System.out.println("The size of your stack is: " + ope);
 	}
 
 	@Override
 	public int tam() {
 		// TODO Auto-generated method stub
-		return 0;
+		return tam;
 	}
 
 	@Override
