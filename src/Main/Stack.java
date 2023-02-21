@@ -1,6 +1,6 @@
 package Main;
 
-public class Stack implements IStack{
+public class Stack<T> implements IStack<T>{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -8,7 +8,7 @@ public class Stack implements IStack{
 	}
 
 	@Override
-	public Object pop() {
+	public T pop() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -26,7 +26,7 @@ public class Stack implements IStack{
 	}
 
 	@Override
-	public Object peek() {
+	public T peek() {
 		// TODO Auto-generated method stub
 		return null;
 	}
