@@ -7,4 +7,28 @@ public class Stack implements IStack{
 
 	}
 
+	@Override
+	public Object pop() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void push(Object item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int tam() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Object peek() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
