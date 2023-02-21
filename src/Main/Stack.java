@@ -15,13 +15,21 @@ public class Stack<T> implements IStack<T>{
 
 	@Override
 	public T pop() {
-		// TODO Auto-generated method stub
+		if (tam != 0) {
+			T item = now.get(tam - 1);
+			now.remove(tam - 1);
+			tam = (tam - 1);
+			System.out.println("pop:" + item);
+			return item;
+		}
+		else {
+			System.out.println("Hey, sorry, the stack is empty :)");
+		}
 		return null;
 	}
 
 	@Override
 	public void push(Object item) {
-		// TODO Auto-generated method stub
 		
 	}
 
