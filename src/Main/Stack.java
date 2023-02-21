@@ -13,6 +13,7 @@ public class Stack<T> implements IStack<T>{
 		tam = 0;
 	}
 
+	// Pop: Elemento recientemente enviado se elimina y envia
 	@Override
 	public T pop() {
 		if (tam != 0) {
@@ -28,6 +29,7 @@ public class Stack<T> implements IStack<T>{
 		return null;
 	}
 
+	// Push: Agregar elemento y aumentar tamano 
 	@Override
 	public void push(T item) {
 		now.add(item);
@@ -41,6 +43,7 @@ public class Stack<T> implements IStack<T>{
 		return tam;
 	}
 
+	// Proximo valor
 	@Override
 	public T peek() {
 		if(tam == 0) {
