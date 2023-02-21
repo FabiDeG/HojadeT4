@@ -1,5 +1,7 @@
 package Main;
 
-public interface IStack {
+public interface IStack <T>{
+	
+	
 
 }
