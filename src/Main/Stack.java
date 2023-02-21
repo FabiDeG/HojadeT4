@@ -38,14 +38,15 @@ public class Stack<T> implements IStack<T>{
 
 	@Override
 	public int tam() {
-		// TODO Auto-generated method stub
 		return tam;
 	}
 
 	@Override
 	public T peek() {
-		// TODO Auto-generated method stub
-		return null;
+		if(tam == 0) {
+			System.out.println("Sorry, right now your stack is empty");
+		}
+		return now.get(0);
 	}
 
 }
