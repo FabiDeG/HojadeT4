@@ -8,6 +8,11 @@ public class Stack<T> implements IStack<T>{
 
 	private ArrayList <T> now;
 
+	public Stack(){
+		now = new ArrayList<>();
+		tam = 0;
+	}
+
 	@Override
 	public T pop() {
 		// TODO Auto-generated method stub
