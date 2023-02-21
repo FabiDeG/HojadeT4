@@ -28,10 +28,11 @@ public class Calcu implements ICalcu{
 		return (num1 / num2);
 	}
 
+	//Operacion multiplicacion
 	@Override
 	public float Multiplicar(float num1, float num2) {
 		// TODO Auto-generated method stub
-		return 0;
+		return (num1 * num2);
 	}
 
 }
