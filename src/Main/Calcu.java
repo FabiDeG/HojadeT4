@@ -14,16 +14,18 @@ public class Calcu implements ICalcu{
 		return (num1 + num2);
 	}
 
+	// Operacion resta
 	@Override
 	public float Resta(float num1, float num2) {
 		// TODO Auto-generated method stub
-		return 0;
+		return (num1 - num2);
 	}
 
+	//Operacion division
 	@Override
 	public float Dividir(float num1, float num2) {
 		// TODO Auto-generated method stub
-		return 0;
+		return (num1 / num2);
 	}
 
 	@Override
