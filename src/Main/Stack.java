@@ -1,11 +1,12 @@
 package Main;
 
-public class Stack<T> implements IStack<T>{
+import java.util.ArrayList;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public class Stack<T> implements IStack<T>{ 
+	
+	private int tam;
 
-	}
+	private ArrayList <T> now;
 
 	@Override
 	public T pop() {
