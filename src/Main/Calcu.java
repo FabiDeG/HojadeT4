@@ -7,10 +7,11 @@ public class Calcu implements ICalcu{
 
 	}
 
+	// Operacion suma
 	@Override
 	public float Suma(float num1, float num2) {
 		// TODO Auto-generated method stub
-		return 0;
+		return (num1 + num2);
 	}
 
 	@Override
