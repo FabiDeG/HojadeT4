@@ -15,25 +15,38 @@ public class DriverP {
 		String inflix = "";
 		inflix = scanner.nextLine();
 		
-		float num1;
-		float num2;
-		float res;
-		
 		Stack<String> operandoS = new Stack<>();
         Stack<String> operadorS = new Stack<>();
-        String[] car = inflix.split("(?<=[-+*/])|(?=[-+*/]) ");
+        String[] car = inflix.split("(?<=[-+*/()])|(?=[-+*/()])");
         for (String carac : car) {
         	switch (carac) {
         	case "+":
             case "-":
             case "*":
             case "/":
-            	operadorS.push(carac);
+            case "(":
+                operadorS.push(carac);
+                break;
+            case ")":
+                while (!operadorS.peek().equals("(")) {
+                    String op = operadorS.pop();
+                    String n2 = operandoS.pop();
+                    String n1 = operandoS.pop();
+                    operandoS.push(operaciones(n1, n2, op));
+                }
+                operadorS.pop(); // sacar el "(" del stack de operadores
+                if (!operadorS.empty() && 
+                        (operadorS.peek().equals("*") || operadorS.peek().equals("/"))) {
+                    String op = operadorS.pop();
+                    String n2 = operandoS.pop();
+                    String n1 = operandoS.pop();
+                    operandoS.push(operaciones(n1, n2, op));
+                }
                 break;
             default:
             	operandoS.push(carac);
                 if (!operadorS.empty() && 
-                    (operadorS.peek().equals("*") || operadorS.peek().equals("/"))) {
+                    (operadorS.peek().equals("*") || operadorS.peek().equals("/") )) {
                     String op = operadorS.pop();
                     String n2 = operandoS.pop();
                     String n1 = operandoS.pop();
@@ -49,9 +62,11 @@ public class DriverP {
             String n1 = operandoS.pop();
             operandoS.push(operaciones(n1, n2, op));
         }
-   
+        
+        System.out.println();
         System.out.println("El resultado es: " + operandoS.pop());
      
+		
 		
 	}
 
