@@ -40,15 +40,17 @@ public class Stack<T> implements IStack<T>{
 
 	@Override
 	public int tam() {
-		return tam;
+		return now.size();
 	}
 
 	@Override
 	public T peek() {
-		if(tam == 0) {
-			System.out.println("Sorry, right now your stack is empty");
-		}
-		return now.get(0);
+		return now.get(tam() - 1);
 	}
-
+	
+	@Override
+	public boolean empty()
+	{
+		return tam() == 0;
+	}
 }

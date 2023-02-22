@@ -9,6 +9,7 @@ public interface IStack <T>{
 	public int tam();
 	
 	public T peek();
-
+	
+	public boolean empty();
 
 }
