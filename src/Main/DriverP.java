@@ -21,7 +21,7 @@ public class DriverP {
 		
 		Stack<String> operandoS = new Stack<>();
         Stack<String> operadorS = new Stack<>();
-        String[] car = inflix.split("(?<=[-+*/])|(?=[-+*/])");
+        String[] car = inflix.split("(?<=[-+*/])|(?=[-+*/]) ");
         for (String carac : car) {
         	switch (carac) {
         	case "+":
@@ -49,14 +49,31 @@ public class DriverP {
             String n1 = operandoS.pop();
             operandoS.push(operaciones(n1, n2, op));
         }
-        
+   
         System.out.println("El resultado es: " + operandoS.pop());
      
-		
 		
 	}
 
 	 public static String operaciones(String n1, String n2, String op) {
-	       
+		 Calcu calcu = new Calcu();
+		 float op1 = Float.parseFloat(n1);
+		 float op2 = Float.parseFloat(n2);
+	     float res = 0;
+	     switch (op) {
+         case "+":
+        	 res = calcu.Suma(op2, op1);
+             break;
+         case "-":
+        	 res = calcu.Resta(op2, op1);
+             break;
+         case "*":
+        	 res = calcu.Multiplicar(op2, op1);
+             break;
+         case "/":
+        	 res = calcu.Dividir(op2, op1);
+             break;
+     }
+     return Float.toString(res);
 	    }
 }
